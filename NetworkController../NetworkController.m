@@ -1,11 +1,3 @@
-//
-//  NetworkControllerSendingRecievingData.m
-//  interfaceElderlySupport
-//
-//  Created by Kubota Naoyuki on 2017/02/24.
-//  Copyright © 2017年 Kubota Naoyuki. All rights reserved.
-//
-
 #import "NetworkControllerSendingRecievingData.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -45,29 +37,7 @@ int		port,n;
 
 int initServer = 0;
 
-//serverのIP確認のためのUDP通信
-/*
-void udpreceive()    //  receive server (host) IP through UDP/IP communication
-{
-    int sock;
-    struct sockaddr_in addr;
-    
-    sock = socket(AF_INET, SOCK_DGRAM, 0);
-    addr.sin_family = AF_INET;
-    addr.sin_port = htons(UDP_PORT);
-    addr.sin_addr.s_addr = INADDR_ANY;
-    addr.sin_len = sizeof(addr);
-    printf("Client IP %s\n", inet_ntoa(addr.sin_addr));
-    
-    bind(sock, (struct sockaddr *)&addr, sizeof(addr));
-    memset(serverip, 0, sizeof(serverip));
-    recv(sock, serverip, sizeof(serverip), 0);
-    
-    printf("Server IP %s\n", serverip);
-    close(sock);
-    
-}
- */
+
 
 //Initialize the server
 int client_init(){ //not void
@@ -90,70 +60,7 @@ int client_init(){ //not void
     return 1;
     
 }
-/*
-int mainTry()
-{
-    char rank[10];
-    int num=0,point=0,p;
-    //udp通信を用いたserverのIPの収得
-    //    udpreceive();
-    printf("Client Started \n");
-    
-    int loopThrough = 1;
-    
-    while (loopThrough == 1) {
-        //Clientの初期化
-        
-        initServer = client_init();
-        
-        //クラスが1級で87点の場合:1087
-        //先ずはクラス
-        num=1;
-        rank[0]=textdata[num];
-        
-        //点数の分類
-        point=87;
-        p=point/100;
-        rank[1]=textdata[p];
-        p=(point%100)/10;
-        rank[2]=textdata[p];
-        p=(point%10);
-        rank[3]=textdata[p];
-        rank[4]='\0';
-        
-        //rankの値をbufに入れる
-        memset(buf,0,sizeof(buf));
-        strcpy(buf, rank);
-        
-        //sendを用いてデータを送信
-        send(srcSocket, buf, sizeof(buf),0); //send
-        
-        printf("sending message: %s\n", buf);
-        if((recv(srcSocket, juliBuff, sizeof(juliBuff), 0)) == -1){
-            printf("Failed to recieve");
-        }
-        else{
-            printf("Recieve from server: %s\n",juliBuff);
-            loopThrough = 0;
-        }
-        
-        juliBuff[0]='\0';
-        
-        
-        //receive from server
-        //        recv(server_socket, robot2, sizeof(robot2),0); //recieve
-        //        printf("Receive from Server : %s\n",robot2);
-        sleep(1);
-        //サーバを終了
-        close(srcSocket);
-        printf("Client Closed \n");
-        //メモリ解放
-        fflush(stdin);
-    }
-    
-    return EXIT_SUCCESS;
-}
- */
+
 
 const char * returnRecievedMessageFromServer(){
     char rank[10];
