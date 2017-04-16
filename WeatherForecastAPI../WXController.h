@@ -1,10 +1,3 @@
-//
-//  WXController.h
-//  FetchingWeatherData
-//
-//  Created by Kubota Naoyuki on 2016/05/27.
-//  Copyright © 2016年 Kubota Naoyuki. All rights reserved.
-//
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
