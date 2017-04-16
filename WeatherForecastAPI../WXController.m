@@ -1,19 +1,3 @@
-//
-//  WXController.m
-//  FetchingWeatherData
-//
-//  Created by Kubota Naoyuki on 2016/05/27.
-//  Copyright © 2016年 Kubota Naoyuki. All rights reserved.
-
-//JSON basic language explanation:
-/*
- [] denote an array which is parsed into a NSArray
- {} denote an dictionary which is parsed into a NSDictionary
- true or false is a BOOL
- 123, 32, etc is int, NSInteger, NSNumber, etc
- The text with "" is for NSString
- */
-//
 
 #define kBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0) //First priority
 
