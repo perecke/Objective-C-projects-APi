@@ -1,10 +1,3 @@
-//
-//  NetworkControllerSendingRecievingData.h
-//  interfaceElderlySupport
-//
-//  Created by Kubota Naoyuki on 2017/02/24.
-//  Copyright © 2017年 Kubota Naoyuki. All rights reserved.
-//
 
 #import <Foundation/Foundation.h>
 
