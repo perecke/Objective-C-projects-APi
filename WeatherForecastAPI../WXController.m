@@ -66,7 +66,7 @@ int loaded = 0;
     userLatitude = locationManager.location.coordinate.latitude;
     userLongtitude = locationManager.location.coordinate.longitude;
     
-    NSString *urlString = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/weather?lat=%f&lon=%f&appid=ef12dbbea654b57243673c86b64d026a",userLatitude,userLongtitude];
+    NSString *urlString = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/weather?lat=%f&lon=%f&appid=YOURAPIID",userLatitude,userLongtitude];
     NSString *urlStringForHourlyForecast = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/forecast?lat=%f&lon=%f&appid=ef12dbbea654b57243673c86b64d026a",userLatitude,userLongtitude];
     
     NSURL *urlOfCurrentCondition = [NSURL URLWithString:urlString];
